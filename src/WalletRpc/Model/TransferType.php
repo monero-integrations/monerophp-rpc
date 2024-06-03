@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\WalletRpc\Model;
+namespace MoneroIntegrations\MoneroRpc\WalletRpc\Model;
 
 enum TransferType: string
 {

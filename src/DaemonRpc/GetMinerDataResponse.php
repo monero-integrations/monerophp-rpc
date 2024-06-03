@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonRpc;
+namespace MoneroIntegrations\MoneroRpc\DaemonRpc;
 
-use RefRing\MoneroRpcPhp\DaemonRpc\Model\BacklogTransaction;
-use RefRing\MoneroRpcPhp\DaemonRpc\Model\HexDifficulty;
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\Model\BacklogTransaction;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\Model\HexDifficulty;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
 use Square\Pjson\Json;
 use Square\Pjson\JsonDataSerializable;
 

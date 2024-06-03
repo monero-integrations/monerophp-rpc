@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonRpc;
+namespace MoneroIntegrations\MoneroRpc\DaemonRpc;
 
-use RefRing\MoneroRpcPhp\DaemonRpc\Model\AuxPow;
-use RefRing\MoneroRpcPhp\Request\ParameterInterface;
-use RefRing\MoneroRpcPhp\Request\RpcRequest;
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\Model\AuxPow;
+use MoneroIntegrations\MoneroRpc\Request\ParameterInterface;
+use MoneroIntegrations\MoneroRpc\Request\RpcRequest;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
 use Square\Pjson\Json;
 use Square\Pjson\JsonDataSerializable;
 

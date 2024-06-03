@@ -1,52 +1,62 @@
-name: "PHPStan"
+name: Run PHPStan
+
+# Run PHPStan to annotate the code
 
 on:
   push:
-  pull_request:
-
-env:
-  COMPOSER_FLAGS: "--ansi --no-interaction --prefer-dist"
-  SYMFONY_PHPUNIT_VERSION: ""
-
-permissions:
-  contents: read
+    branches:
+      - main
 
 jobs:
-  tests:
-    name: "PHPStan"
-
+  phpstan:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        include:
-          - php-version: "8.1"
-      fail-fast: false
+        php: [ '8.0' ]
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
 
     steps:
-      - name: "Checkout"
-        uses: "actions/checkout@v4"
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: "Install PHP"
-        uses: "shivammathur/setup-php@v2"
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
         with:
-          coverage: "none"
-          ini-values: "memory_limit=-1"
-          php-version: "${{ matrix.php-version }}"
+          php-version: ${{ matrix.php }}
+          tools: composer, cs2pr
+          extensions: zip
 
-      - name: "Determine composer cache directory"
-        id: "determine-composer-cache-directory"
-        run: "echo \"directory=$(composer config cache-dir)\" >> $GITHUB_OUTPUT"
+      - name: Run composer install
+        continue-on-error: true
+        run: composer install
 
-      - name: "Cache dependencies installed with composer"
-        uses: "actions/cache@v4"
+      - name: Run PHPStan to add annotations to the code
+        id: run-phpstan
+        continue-on-error: true
+        run: |
+          vendor/bin/phpstan analyse -c phpstan.neon --memory-limit 1G --no-progress --error-format=checkstyle | cs2pr
+
+      - name: Get PhpStan level
+        id: phpstan-level
+        run: |
+          LEVEL=$(cat phpstan.neon | grep level | sed "s/[^0-9]*//")
+          echo "level=$LEVEL" >> "$GITHUB_OUTPUT"
+
+      - name: Check success
+        if: steps.run-phpstan.outcome == 'success'
+        run: curl -o .github/phpstan.svg https://img.shields.io/badge/PHPStan-Level%20${{ steps.phpstan-level.outputs.level}}-2a5ea7.svg
+
+      - name: Check failures
+        if: steps.run-phpstan.outcome != 'success'
+        run: curl -o .github/phpstan.svg https://img.shields.io/badge/PHPStan-Level%20${{ steps.phpstan-level.outputs.level}}❌-lightgrey.svg
+
+      - name: Commit README badge changes
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          path: "${{ steps.determine-composer-cache-directory.outputs.directory }}"
-          key: "php-${{ matrix.php-version }}-symfony-php-unit-version-${{ env.SYMFONY_PHPUNIT_VERSION }}-${{ hashFiles('**/composer.lock') }}"
-          restore-keys: "php-${{ matrix.php-version }}-symfony-php-unit-version-${{ env.SYMFONY_PHPUNIT_VERSION }}"
-
-      - name: "Install dependencies"
-        run: "composer config platform --unset && composer install ${{ env.COMPOSER_FLAGS }}"
-
-      - name: "Run PHPStan"
-        run: "composer test:phpstan"
+          file_pattern: ".github/phpstan.svg"
+          commit_message: "chore: update PHPStan badge [skip ci]"

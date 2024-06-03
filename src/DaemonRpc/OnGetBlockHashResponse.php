@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonRpc;
+namespace MoneroIntegrations\MoneroRpc\DaemonRpc;
 
-use RefRing\MoneroRpcPhp\Trait\StringResultTrait;
+use MoneroIntegrations\MoneroRpc\Trait\StringResultTrait;
 use Square\Pjson\JsonDataSerializable;
 
 /**

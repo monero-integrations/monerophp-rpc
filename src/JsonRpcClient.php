@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp;
+namespace MoneroIntegrations\MoneroRpc;
 
 use Http\Discovery\Psr17Factory;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
-use RefRing\MoneroRpcPhp\Enum\ErrorCode;
-use RefRing\MoneroRpcPhp\Exception\MoneroRpcException;
-use RefRing\MoneroRpcPhp\Http\DigestAuthentication;
-use RefRing\MoneroRpcPhp\Request\OtherRpcRequest;
-use RefRing\MoneroRpcPhp\Request\RpcRequest;
+use MoneroIntegrations\MoneroRpc\Enum\ErrorCode;
+use MoneroIntegrations\MoneroRpc\Exception\MoneroRpcException;
+use MoneroIntegrations\MoneroRpc\Http\DigestAuthentication;
+use MoneroIntegrations\MoneroRpc\Request\OtherRpcRequest;
+use MoneroIntegrations\MoneroRpc\Request\RpcRequest;
 
 abstract class JsonRpcClient
 {

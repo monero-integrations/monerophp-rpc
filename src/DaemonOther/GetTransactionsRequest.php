@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonOther;
+namespace MoneroIntegrations\MoneroRpc\DaemonOther;
 
-use RefRing\MoneroRpcPhp\Request\OtherRpcRequest;
+use MoneroIntegrations\MoneroRpc\Request\OtherRpcRequest;
 use Square\Pjson\Json;
 
 /**

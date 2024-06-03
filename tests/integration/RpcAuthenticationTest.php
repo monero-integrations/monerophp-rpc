@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\integration;
+namespace MoneroIntegrations\MoneroRpc\Tests\integration;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientExceptionInterface;
-use RefRing\MoneroRpcPhp\ClientBuilder;
-use RefRing\MoneroRpcPhp\Exception\AuthenticationException;
+use MoneroIntegrations\MoneroRpc\ClientBuilder;
+use MoneroIntegrations\MoneroRpc\Exception\AuthenticationException;
 
 class RpcAuthenticationTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Http;
+namespace MoneroIntegrations\MoneroRpc\Http;
 
 /**
  * A simple implementation of the digest authentication challenge specifcally for the monero rpc servers

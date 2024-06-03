@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonOther;
+namespace MoneroIntegrations\MoneroRpc\DaemonOther;
 
-use RefRing\MoneroRpcPhp\Enum\UpdateCommand;
-use RefRing\MoneroRpcPhp\Request\OtherRpcRequest;
+use MoneroIntegrations\MoneroRpc\Enum\UpdateCommand;
+use MoneroIntegrations\MoneroRpc\Request\OtherRpcRequest;
 use Square\Pjson\Json;
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
 
 /**
  * Update daemon.

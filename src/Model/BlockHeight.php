@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Model;
+namespace MoneroIntegrations\MoneroRpc\Model;
 
 use Square\Pjson\JsonDataSerializable;
 

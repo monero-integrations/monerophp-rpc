@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonRpc;
+namespace MoneroIntegrations\MoneroRpc\DaemonRpc;
 
-use RefRing\MoneroRpcPhp\Request\RpcRequest;
+use MoneroIntegrations\MoneroRpc\Request\RpcRequest;
 
 /**
  * Look up how many blocks are in the longest chain known to the node.

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Request;
+namespace MoneroIntegrations\MoneroRpc\Request;
 
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
 use Square\Pjson\Json;
 
 class RpcRequest

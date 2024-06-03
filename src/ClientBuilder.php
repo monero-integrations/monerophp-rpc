@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp;
+namespace MoneroIntegrations\MoneroRpc;
 
 use Http\Discovery\Psr18ClientDiscovery;
 use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerAwareTrait;
 use Psr\Log\LoggerInterface;
-use RefRing\MoneroRpcPhp\Enum\RpcClientType;
+use MoneroIntegrations\MoneroRpc\Enum\RpcClientType;
 
 final class ClientBuilder
 {

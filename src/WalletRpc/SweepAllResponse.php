@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\WalletRpc;
+namespace MoneroIntegrations\MoneroRpc\WalletRpc;
 
 /**
  * Send all unlocked balance to an address.

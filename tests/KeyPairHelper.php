@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests;
+namespace MoneroIntegrations\MoneroRpc\Tests;
 
 use MoneroIntegrations\MoneroPhp\Cryptonote;
 use MoneroIntegrations\MoneroPhp\mnemonic;

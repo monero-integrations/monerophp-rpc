@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\integration;
+namespace MoneroIntegrations\MoneroRpc\Tests\integration;
 
 use Http\Discovery\Psr18ClientDiscovery;
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockHeaderByHashResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockHeaderByHeightResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockTemplateResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetLastBlockHeaderResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\Model\BlockHeader;
-use RefRing\MoneroRpcPhp\DaemonRpcClient;
-use RefRing\MoneroRpcPhp\Enum\ResponseStatus;
-use RefRing\MoneroRpcPhp\Exception\InvalidAddressException;
-use RefRing\MoneroRpcPhp\Exception\InvalidBlockHashException;
-use RefRing\MoneroRpcPhp\Exception\InvalidBlockHeightException;
-use RefRing\MoneroRpcPhp\Exception\InvalidBlockHeightRangeException;
-use RefRing\MoneroRpcPhp\Exception\InvalidReservedSizeException;
-use RefRing\MoneroRpcPhp\Model\Amount;
-use RefRing\MoneroRpcPhp\Model\BlockHash;
-use RefRing\MoneroRpcPhp\Tests\TestHelper;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockHeaderByHashResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockHeaderByHeightResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockTemplateResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetLastBlockHeaderResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\Model\BlockHeader;
+use MoneroIntegrations\MoneroRpc\DaemonRpcClient;
+use MoneroIntegrations\MoneroRpc\Enum\ResponseStatus;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidAddressException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidBlockHashException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidBlockHeightException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidBlockHeightRangeException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidReservedSizeException;
+use MoneroIntegrations\MoneroRpc\Model\Amount;
+use MoneroIntegrations\MoneroRpc\Model\BlockHash;
+use MoneroIntegrations\MoneroRpc\Tests\TestHelper;
 
 final class EmptyBlockchainTest extends TestCase
 {

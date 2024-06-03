@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonOther;
+namespace MoneroIntegrations\MoneroRpc\DaemonOther;
 
-use RefRing\MoneroRpcPhp\Request\OtherRpcRequest;
-use RefRing\MoneroRpcPhp\Trait\EmptyOtherRpcRequest;
+use MoneroIntegrations\MoneroRpc\Request\OtherRpcRequest;
+use MoneroIntegrations\MoneroRpc\Trait\EmptyOtherRpcRequest;
 
 /**
  * Get the mining status of the daemon.

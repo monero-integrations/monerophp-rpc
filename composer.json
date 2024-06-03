@@ -1,14 +1,27 @@
 {
-    "name": "refring/monero-rpc-php",
-    "description": "A modern fully strong-typed library for using the Monero daemon rpc and wallet rpc APIs",
+    "name": "monero-integrations/monero-rpc",
+    "description": "Monero library for interacting with daemon rpc and wallet rpc APIs.",
     "keywords": ["monero", "monero-wallet-rpc", "monero daemon","sdk", "api", "client"],
+    "homepage": "https://github.com/monero-integrations/monerophp-rpc",
+    "type": "library",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Monero Integrations",
+            "email": "support@monerointegrations.com"
+        },
         {
             "name": "refring",
             "email": "refring@proton.me"
         }
     ],
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    },
     "require": {
         "php": "^8.1.0",
         "ext-json": "*",
@@ -36,23 +49,16 @@
     },
     "autoload": {
         "psr-4": {
-            "RefRing\\MoneroRpcPhp\\": "src/"
+            "MoneroIntegrations\\MoneroRpc\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RefRing\\MoneroRpcPhp\\Tests\\": "tests/"
+            "MoneroIntegrations\\MoneroRpc\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "config": {
-        "sort-packages": true,
-        "preferred-install": "dist",
-        "allow-plugins": {
-            "php-http/discovery": false
-        }
-    },
     "scripts": {
         "lint": "pint --preset psr12 -v",
         "refactor": "rector --debug",
@@ -72,7 +78,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/refring/monerophp.git"
+            "url": "https://github.com/monero-integrations/monerophp-rpc.git"
         }
     ]
 }

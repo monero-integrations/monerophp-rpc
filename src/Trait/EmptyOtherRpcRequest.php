@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Trait;
+namespace MoneroIntegrations\MoneroRpc\Trait;
 
-use RefRing\MoneroRpcPhp\Request\OtherRpcRequest;
+use MoneroIntegrations\MoneroRpc\Request\OtherRpcRequest;
 
 trait EmptyOtherRpcRequest
 {

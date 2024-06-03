@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\integration;
+namespace MoneroIntegrations\MoneroRpc\Tests\integration;
 
 use Http\Discovery\Psr18ClientDiscovery;
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\DaemonRpcClient;
-use RefRing\MoneroRpcPhp\Enum\ResponseStatus;
+use MoneroIntegrations\MoneroRpc\DaemonRpcClient;
+use MoneroIntegrations\MoneroRpc\Enum\ResponseStatus;
 
 final class DaemonOtherTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Trait;
+namespace MoneroIntegrations\MoneroRpc\Trait;
 
 use Square\Pjson\Json;
 

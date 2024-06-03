@@ -2,37 +2,37 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\integration;
+namespace MoneroIntegrations\MoneroRpc\Tests\integration;
 
 use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\ClientBuilder;
-use RefRing\MoneroRpcPhp\DaemonRpcClient;
-use RefRing\MoneroRpcPhp\Enum\NetType;
-use RefRing\MoneroRpcPhp\Exception\AccountIndexOutOfBoundException;
-use RefRing\MoneroRpcPhp\Exception\AddressIndexOutOfBoundException;
-use RefRing\MoneroRpcPhp\Exception\AddressNotInWalletException;
-use RefRing\MoneroRpcPhp\Exception\AttributeNotFoundException;
-use RefRing\MoneroRpcPhp\Exception\HttpApiException;
-use RefRing\MoneroRpcPhp\Exception\IndexOutOfRangeException;
-use RefRing\MoneroRpcPhp\Exception\InvalidAddressException;
-use RefRing\MoneroRpcPhp\Exception\InvalidLanguageException;
-use RefRing\MoneroRpcPhp\Exception\InvalidOriginalPasswordException;
-use RefRing\MoneroRpcPhp\Exception\InvalidPaymentIdException;
-use RefRing\MoneroRpcPhp\Exception\NoWalletFileException;
-use RefRing\MoneroRpcPhp\Exception\OpenWalletException;
-use RefRing\MoneroRpcPhp\Exception\TagNotFoundException;
-use RefRing\MoneroRpcPhp\Exception\WalletExistsException;
-use RefRing\MoneroRpcPhp\Model\Address;
-use RefRing\MoneroRpcPhp\Model\Amount;
-use RefRing\MoneroRpcPhp\Tests\KeyPairHelper;
-use RefRing\MoneroRpcPhp\Tests\TestHelper;
-use RefRing\MoneroRpcPhp\WalletRpc\CreateAccountResponse;
-use RefRing\MoneroRpcPhp\WalletRpc\CreateAddressResponse;
-use RefRing\MoneroRpcPhp\WalletRpc\GenerateFromKeysResponse;
-use RefRing\MoneroRpcPhp\WalletRpc\Model\QueryKeyType;
-use RefRing\MoneroRpcPhp\WalletRpc\Model\SubAddressIndex;
-use RefRing\MoneroRpcPhp\WalletRpcClient;
+use MoneroIntegrations\MoneroRpc\ClientBuilder;
+use MoneroIntegrations\MoneroRpc\DaemonRpcClient;
+use MoneroIntegrations\MoneroRpc\Enum\NetType;
+use MoneroIntegrations\MoneroRpc\Exception\AccountIndexOutOfBoundException;
+use MoneroIntegrations\MoneroRpc\Exception\AddressIndexOutOfBoundException;
+use MoneroIntegrations\MoneroRpc\Exception\AddressNotInWalletException;
+use MoneroIntegrations\MoneroRpc\Exception\AttributeNotFoundException;
+use MoneroIntegrations\MoneroRpc\Exception\HttpApiException;
+use MoneroIntegrations\MoneroRpc\Exception\IndexOutOfRangeException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidAddressException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidLanguageException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidOriginalPasswordException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidPaymentIdException;
+use MoneroIntegrations\MoneroRpc\Exception\NoWalletFileException;
+use MoneroIntegrations\MoneroRpc\Exception\OpenWalletException;
+use MoneroIntegrations\MoneroRpc\Exception\TagNotFoundException;
+use MoneroIntegrations\MoneroRpc\Exception\WalletExistsException;
+use MoneroIntegrations\MoneroRpc\Model\Address;
+use MoneroIntegrations\MoneroRpc\Model\Amount;
+use MoneroIntegrations\MoneroRpc\Tests\KeyPairHelper;
+use MoneroIntegrations\MoneroRpc\Tests\TestHelper;
+use MoneroIntegrations\MoneroRpc\WalletRpc\CreateAccountResponse;
+use MoneroIntegrations\MoneroRpc\WalletRpc\CreateAddressResponse;
+use MoneroIntegrations\MoneroRpc\WalletRpc\GenerateFromKeysResponse;
+use MoneroIntegrations\MoneroRpc\WalletRpc\Model\QueryKeyType;
+use MoneroIntegrations\MoneroRpc\WalletRpc\Model\SubAddressIndex;
+use MoneroIntegrations\MoneroRpc\WalletRpcClient;
 
 class BasicWalletTest extends TestCase
 {

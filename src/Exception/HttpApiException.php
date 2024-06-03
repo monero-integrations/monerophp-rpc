@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Exception;
+namespace MoneroIntegrations\MoneroRpc\Exception;
 
 use RuntimeException;
 

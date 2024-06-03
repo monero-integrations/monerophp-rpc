@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\WalletRpc;
+namespace MoneroIntegrations\MoneroRpc\WalletRpc;
 
-use RefRing\MoneroRpcPhp\Model\Address;
+use MoneroIntegrations\MoneroRpc\Model\Address;
 use Square\Pjson\Json;
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
 use Square\Pjson\JsonDataSerializable;
 
 /**

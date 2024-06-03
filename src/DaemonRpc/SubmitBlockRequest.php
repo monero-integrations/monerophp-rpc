@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonRpc;
+namespace MoneroIntegrations\MoneroRpc\DaemonRpc;
 
-use RefRing\MoneroRpcPhp\Request\ParameterInterface;
-use RefRing\MoneroRpcPhp\Request\RpcRequest;
-use RefRing\MoneroRpcPhp\Trait\CollectionTrait;
+use MoneroIntegrations\MoneroRpc\Request\ParameterInterface;
+use MoneroIntegrations\MoneroRpc\Request\RpcRequest;
+use MoneroIntegrations\MoneroRpc\Trait\CollectionTrait;
 
 /**
  * Submit a mined block to the network.

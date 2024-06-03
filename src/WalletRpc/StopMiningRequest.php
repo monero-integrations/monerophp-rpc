@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\WalletRpc;
+namespace MoneroIntegrations\MoneroRpc\WalletRpc;
 
-use RefRing\MoneroRpcPhp\Request\RpcRequest;
+use MoneroIntegrations\MoneroRpc\Request\RpcRequest;
 
 /**
  * Stop mining in the Monero daemon.

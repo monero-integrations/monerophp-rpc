@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonOther;
+namespace MoneroIntegrations\MoneroRpc\DaemonOther;
 
-use RefRing\MoneroRpcPhp\DaemonOther\Model\TxPoolStats;
-use RefRing\MoneroRpcPhp\DaemonRpc\DaemonRpcAccessResponseFields;
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\DaemonOther\Model\TxPoolStats;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\DaemonRpcAccessResponseFields;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
 use Square\Pjson\Json;
 use Square\Pjson\JsonDataSerializable;
 

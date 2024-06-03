@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\unit;
+namespace MoneroIntegrations\MoneroRpc\Tests\unit;
 
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\Model\Amount;
+use MoneroIntegrations\MoneroRpc\Model\Amount;
 
 class AmountTest extends TestCase
 {

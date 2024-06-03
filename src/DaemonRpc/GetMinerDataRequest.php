@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonRpc;
+namespace MoneroIntegrations\MoneroRpc\DaemonRpc;
 
-use RefRing\MoneroRpcPhp\Request\RpcRequest;
+use MoneroIntegrations\MoneroRpc\Request\RpcRequest;
 
 /**
  * Provide the necessary data to create a custom block template. They are used by p2pool.

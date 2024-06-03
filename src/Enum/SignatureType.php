@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Enum;
+namespace MoneroIntegrations\MoneroRpc\Enum;
 
 enum SignatureType: string
 {

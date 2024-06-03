@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\DaemonOther\Model;
+namespace MoneroIntegrations\MoneroRpc\DaemonOther\Model;
 
-use RefRing\MoneroRpcPhp\Model\BigInt;
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\Model\BigInt;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
 use Square\Pjson\Json;
 use Square\Pjson\JsonDataSerializable;
 

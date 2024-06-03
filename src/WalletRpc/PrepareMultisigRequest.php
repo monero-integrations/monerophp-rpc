@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\WalletRpc;
+namespace MoneroIntegrations\MoneroRpc\WalletRpc;
 
-use RefRing\MoneroRpcPhp\Request\RpcRequest;
+use MoneroIntegrations\MoneroRpc\Request\RpcRequest;
 
 /**
  * Prepare a wallet for multisig by generating a multisig string to share with peers.

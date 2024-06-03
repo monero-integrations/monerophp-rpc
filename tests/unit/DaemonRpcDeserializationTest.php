@@ -2,41 +2,41 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\unit;
+namespace MoneroIntegrations\MoneroRpc\Tests\unit;
 
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\DaemonRpc\AddAuxPowResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\BannedResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\CalcPowResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\FlushCacheResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\FlushTxpoolResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GenerateblocksResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetAlternateChainsResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBansResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockCountResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockHeaderByHashResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockHeaderByHeightResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockHeadersRangeResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetBlockTemplateResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetCoinbaseTxSumResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetConnectionsResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetFeeEstimateResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetInfoResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetLastBlockHeaderResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetMinerDataResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetOutputDistributionResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetOutputHistogramResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetTxpoolBacklogResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\GetVersionResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\HardForkInfoResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\Model\BacklogTransaction;
-use RefRing\MoneroRpcPhp\DaemonRpc\OnGetBlockHashResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\PruneBlockchainResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\RelayTxResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\SetBansResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\SubmitBlockResponse;
-use RefRing\MoneroRpcPhp\DaemonRpc\SyncInfoResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\AddAuxPowResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\BannedResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\CalcPowResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\FlushCacheResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\FlushTxpoolResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GenerateblocksResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetAlternateChainsResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBansResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockCountResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockHeaderByHashResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockHeaderByHeightResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockHeadersRangeResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetBlockTemplateResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetCoinbaseTxSumResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetConnectionsResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetFeeEstimateResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetInfoResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetLastBlockHeaderResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetMinerDataResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetOutputDistributionResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetOutputHistogramResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetTxpoolBacklogResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\GetVersionResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\HardForkInfoResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\Model\BacklogTransaction;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\OnGetBlockHashResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\PruneBlockchainResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\RelayTxResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\SetBansResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\SubmitBlockResponse;
+use MoneroIntegrations\MoneroRpc\DaemonRpc\SyncInfoResponse;
 
 class DaemonRpcDeserializationTest extends TestCase
 {

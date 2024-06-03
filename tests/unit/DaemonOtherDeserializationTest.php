@@ -2,38 +2,38 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\unit;
+namespace MoneroIntegrations\MoneroRpc\Tests\unit;
 
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\DaemonOther\GetAltBlocksHashesResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\GetHeightResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\GetLimitResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\GetNetStatsResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\GetOutsResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\GetPeerListResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\GetTransactionPoolResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\GetTransactionPoolStatsResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\GetTransactionsResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\InPeersResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\IsKeyImageSpentResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\MiningStatusResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\Model\Output;
-use RefRing\MoneroRpcPhp\DaemonOther\Model\TransactionData;
-use RefRing\MoneroRpcPhp\DaemonOther\OutPeersResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\PopBlocksResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\SaveBlockchainResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\SendRawTransactionResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\SetBootstrapDaemonResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\SetLimitResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\SetLogCategoriesResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\SetLogHashRateResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\SetLogLevelResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\StartMiningResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\StopDaemonResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\StopMiningResponse;
-use RefRing\MoneroRpcPhp\DaemonOther\UpdateResponse;
-use RefRing\MoneroRpcPhp\Model\Amount;
-use RefRing\MoneroRpcPhp\Model\BlockHash;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetAltBlocksHashesResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetHeightResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetLimitResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetNetStatsResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetOutsResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetPeerListResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetTransactionPoolResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetTransactionPoolStatsResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetTransactionsResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\InPeersResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\IsKeyImageSpentResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\MiningStatusResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\Model\Output;
+use MoneroIntegrations\MoneroRpc\DaemonOther\Model\TransactionData;
+use MoneroIntegrations\MoneroRpc\DaemonOther\OutPeersResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\PopBlocksResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SaveBlockchainResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SendRawTransactionResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetBootstrapDaemonResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetLimitResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetLogCategoriesResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetLogHashRateResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetLogLevelResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\StartMiningResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\StopDaemonResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\StopMiningResponse;
+use MoneroIntegrations\MoneroRpc\DaemonOther\UpdateResponse;
+use MoneroIntegrations\MoneroRpc\Model\Amount;
+use MoneroIntegrations\MoneroRpc\Model\BlockHash;
 
 class DaemonOtherDeserializationTest extends TestCase
 {

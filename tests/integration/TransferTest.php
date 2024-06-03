@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\integration;
+namespace MoneroIntegrations\MoneroRpc\Tests\integration;
 
 use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\ClientBuilder;
-use RefRing\MoneroRpcPhp\DaemonRpcClient;
-use RefRing\MoneroRpcPhp\Exception\InvalidDestinationException;
-use RefRing\MoneroRpcPhp\Model\Address;
-use RefRing\MoneroRpcPhp\Model\Amount;
-use RefRing\MoneroRpcPhp\Tests\TestHelper;
-use RefRing\MoneroRpcPhp\WalletRpc\Model\Destination;
-use RefRing\MoneroRpcPhp\WalletRpc\Model\TransferType;
-use RefRing\MoneroRpcPhp\WalletRpc\TransferResponse;
-use RefRing\MoneroRpcPhp\WalletRpcClient;
+use MoneroIntegrations\MoneroRpc\ClientBuilder;
+use MoneroIntegrations\MoneroRpc\DaemonRpcClient;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidDestinationException;
+use MoneroIntegrations\MoneroRpc\Model\Address;
+use MoneroIntegrations\MoneroRpc\Model\Amount;
+use MoneroIntegrations\MoneroRpc\Tests\TestHelper;
+use MoneroIntegrations\MoneroRpc\WalletRpc\Model\Destination;
+use MoneroIntegrations\MoneroRpc\WalletRpc\Model\TransferType;
+use MoneroIntegrations\MoneroRpc\WalletRpc\TransferResponse;
+use MoneroIntegrations\MoneroRpc\WalletRpcClient;
 
 final class TransferTest extends TestCase
 {

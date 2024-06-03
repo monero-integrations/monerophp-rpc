@@ -2,31 +2,31 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Enum;
+namespace MoneroIntegrations\MoneroRpc\Enum;
 
-use RefRing\MoneroRpcPhp\Exception\AccountIndexOutOfBoundException;
-use RefRing\MoneroRpcPhp\Exception\AddressIndexOutOfBoundException;
-use RefRing\MoneroRpcPhp\Exception\AddressNotInWalletException;
-use RefRing\MoneroRpcPhp\Exception\AttributeNotFoundException;
-use RefRing\MoneroRpcPhp\Exception\AuthenticationException;
-use RefRing\MoneroRpcPhp\Exception\BlockNotAcceptedException;
-use RefRing\MoneroRpcPhp\Exception\HttpApiException;
-use RefRing\MoneroRpcPhp\Exception\IndexOutOfRangeException;
-use RefRing\MoneroRpcPhp\Exception\InvalidAddressException;
-use RefRing\MoneroRpcPhp\Exception\InvalidBlockHashException;
-use RefRing\MoneroRpcPhp\Exception\InvalidBlockHeightException;
-use RefRing\MoneroRpcPhp\Exception\InvalidBlockHeightRangeException;
-use RefRing\MoneroRpcPhp\Exception\InvalidBlockTemplateBlobException;
-use RefRing\MoneroRpcPhp\Exception\InvalidDestinationException;
-use RefRing\MoneroRpcPhp\Exception\InvalidLanguageException;
-use RefRing\MoneroRpcPhp\Exception\InvalidOriginalPasswordException;
-use RefRing\MoneroRpcPhp\Exception\InvalidPaymentIdException;
-use RefRing\MoneroRpcPhp\Exception\InvalidReservedSizeException;
-use RefRing\MoneroRpcPhp\Exception\MoneroRpcException;
-use RefRing\MoneroRpcPhp\Exception\NoWalletFileException;
-use RefRing\MoneroRpcPhp\Exception\OpenWalletException;
-use RefRing\MoneroRpcPhp\Exception\TagNotFoundException;
-use RefRing\MoneroRpcPhp\Exception\WalletExistsException;
+use MoneroIntegrations\MoneroRpc\Exception\AccountIndexOutOfBoundException;
+use MoneroIntegrations\MoneroRpc\Exception\AddressIndexOutOfBoundException;
+use MoneroIntegrations\MoneroRpc\Exception\AddressNotInWalletException;
+use MoneroIntegrations\MoneroRpc\Exception\AttributeNotFoundException;
+use MoneroIntegrations\MoneroRpc\Exception\AuthenticationException;
+use MoneroIntegrations\MoneroRpc\Exception\BlockNotAcceptedException;
+use MoneroIntegrations\MoneroRpc\Exception\HttpApiException;
+use MoneroIntegrations\MoneroRpc\Exception\IndexOutOfRangeException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidAddressException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidBlockHashException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidBlockHeightException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidBlockHeightRangeException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidBlockTemplateBlobException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidDestinationException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidLanguageException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidOriginalPasswordException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidPaymentIdException;
+use MoneroIntegrations\MoneroRpc\Exception\InvalidReservedSizeException;
+use MoneroIntegrations\MoneroRpc\Exception\MoneroRpcException;
+use MoneroIntegrations\MoneroRpc\Exception\NoWalletFileException;
+use MoneroIntegrations\MoneroRpc\Exception\OpenWalletException;
+use MoneroIntegrations\MoneroRpc\Exception\TagNotFoundException;
+use MoneroIntegrations\MoneroRpc\Exception\WalletExistsException;
 
 enum ErrorCode: string
 {

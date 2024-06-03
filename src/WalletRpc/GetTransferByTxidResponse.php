@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\WalletRpc;
+namespace MoneroIntegrations\MoneroRpc\WalletRpc;
 
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
-use RefRing\MoneroRpcPhp\WalletRpc\Model\Transfer;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\WalletRpc\Model\Transfer;
 use Square\Pjson\Json;
 use Square\Pjson\JsonDataSerializable;
 

@@ -1,4 +1,4 @@
-name: "Tests"
+name: "Unit Tests"
 
 on:
   pull_request:
@@ -53,34 +53,3 @@ jobs:
 
       - name: Run tests with PHPUnit
         run: vendor/bin/phpunit
-
-  codecoverage:
-    runs-on: ubuntu-latest
-    name: "Code coverage report"
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Spin up containers
-        run: docker-compose -f tests/docker-compose.yml up -d
-        env:
-          MONERO_VERSION: "0.18.3.1"
-
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.2
-          extensions: none, bcmath, ctype, curl, dom, json, gmp, mbstring, opcache, simplexml, sockets, tokenizer, xml, xmlwriter
-          coverage: xdebug3
-          tools: none
-
-      - name: Install Composer dependencies
-        run: composer install --no-ansi --no-interaction --no-progress --prefer-dist
-
-      - name: Run tests with PHPUnit
-        run: vendor/bin/phpunit --coverage-clover=coverage.xml
-
-      - name: Send code coverage report to Codecov.io
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}

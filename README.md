@@ -1,9 +1,9 @@
 # Monero Daemon & Wallet RPC client
-[![Latest Stable Version](http://poser.pugx.org/refring/monero-rpc-php/v)](https://packagist.org/packages/refring/monero-rpc-php)
+[![Latest Stable Version](http://poser.pugx.org/monero-integrations/monero-rpc/v)](https://packagist.org/packages/monero-integrations/monero-rpc)
 [![Tests](https://github.com/refactor-ring/monero-rpc-php/actions/workflows/tests.yml/badge.svg)](https://github.com/refactor-ring/monero-rpc-php/actions/workflows/tests.yml)
 [![PHPStan](https://github.com/refactor-ring/monero-rpc-php/actions/workflows/phpstan.yml/badge.svg)](https://github.com/refactor-ring/monero-rpc-php/actions/workflows/phpstan.yml)
 [![codecov](https://codecov.io/gh/refactor-ring/monero-rpc-php/graph/badge.svg?token=P8K26M8W6N)](https://codecov.io/gh/refactor-ring/monero-rpc-php)
-[![PHP Version Require](http://poser.pugx.org/refring/monero-rpc-php/require/php)](https://packagist.org/packages/refactor_ring/monero-rpc-php)
+[![PHP Version Require](http://poser.pugx.org/monero-integrations/monero-rpc/require/php)](https://packagist.org/packages/refactor_ring/monero-rpc-php)
 
 Monero daemon and wallet RPC client library written in modern PHP.
 
@@ -19,7 +19,7 @@ Monero daemon and wallet RPC client library written in modern PHP.
 
 You can install the package with Composer, at this this time minimum-stability has to be set to dev:
 ```bash
-composer require refring/monero-rpc-php
+composer require monero-integrations/monero-rpc
 ```
 
 When your project does not have a http client available yet, you should require one as well.
@@ -56,7 +56,7 @@ composer php-http/curl-client
 For the wallet rpc client:
 
 ```php
-$walletClient = (new \RefRing\MoneroRpcPhp\ClientBuilder('http://127.0.0.1:18081/json_rpc'))
+$walletClient = (new \MoneroIntegrations\MoneroRpc\ClientBuilder('http://127.0.0.1:18081/json_rpc'))
     ->buildWalletClient();
 
 echo $walletClient->getVersion()->version;
@@ -64,7 +64,7 @@ echo $walletClient->getVersion()->version;
 Daemon rpc client:
 
 ```php
-$daemonClient = (new \RefRing\MoneroRpcPhp\ClientBuilder('http://127.0.0.1:18081/json_rpc'))
+$daemonClient = (new \MoneroIntegrations\MoneroRpc\ClientBuilder('http://127.0.0.1:18081/json_rpc'))
     ->buildDaemonClient();
 
 echo $daemonClient->getVersion()->version;
@@ -73,7 +73,7 @@ echo $daemonClient->getVersion()->version;
 ### Using authentication
 
 ```php
-$daemonClient = (new \RefRing\MoneroRpcPhp\ClientBuilder('http://127.0.0.1:18081/json_rpc'))
+$daemonClient = (new \MoneroIntegrations\MoneroRpc\ClientBuilder('http://127.0.0.1:18081/json_rpc'))
     ->withAuthentication('foo', 'bar')
     ->buildDaemonClient();
 
@@ -90,7 +90,7 @@ $httpClient = new Psr18Client(new CurlHttpClient([
     'proxy' => 'socks5://username:password@127.0.0.1:9999',
 ]));
 
-$daemonClient = (new \RefRing\MoneroRpcPhp\ClientBuilder('http://examplenode/json_rpc'))
+$daemonClient = (new \MoneroIntegrations\MoneroRpc\ClientBuilder('http://examplenode/json_rpc'))
     ->withHttpClient($httpClient)
     ->buildDaemonClient();
 ```
@@ -101,7 +101,7 @@ The client builder also supports injecting a logger and/or a http client:
 $httpClient = new \Symfony\Component\HttpClient\Psr18Client();
 $logger = new \Psr\Log\NullLogger();
 
-$daemonClient = (new \RefRing\MoneroRpcPhp\ClientBuilder('http://127.0.0.1:18081/json_rpc'))    
+$daemonClient = (new \MoneroIntegrations\MoneroRpc\ClientBuilder('http://127.0.0.1:18081/json_rpc'))    
     ->withHttpClient($httpClient)
     ->withLogger($logger)
     ->buildDaemonClient();
@@ -158,9 +158,10 @@ See [CHANGELOG.md](CHANGELOG.md)
 <a name="license"></a>
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 ## Acknowledgments
+* [refring](https://github.com/refring) - Original author of this library.
 * [monero-rpc-rs](https://github.com/monero-rs/monero-rpc-rs) - Parts of this project served as inspiration.
 * [monero-php](https://github.com/monero-integrations/monerophp) - Thanks for providing the php ecosystem with a Monero library during all these years!
 * [Monero](https://getmonero.org) - Thanks to everybody involved!

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\WalletRpc;
+namespace MoneroIntegrations\MoneroRpc\WalletRpc;
 
-use RefRing\MoneroRpcPhp\Enum\TransferPriority;
-use RefRing\MoneroRpcPhp\Request\ParameterInterface;
-use RefRing\MoneroRpcPhp\Request\RpcRequest;
-use RefRing\MoneroRpcPhp\Trait\JsonSerializeBigInt;
-use RefRing\MoneroRpcPhp\WalletRpc\Model\Destination;
+use MoneroIntegrations\MoneroRpc\Enum\TransferPriority;
+use MoneroIntegrations\MoneroRpc\Request\ParameterInterface;
+use MoneroIntegrations\MoneroRpc\Request\RpcRequest;
+use MoneroIntegrations\MoneroRpc\Trait\JsonSerializeBigInt;
+use MoneroIntegrations\MoneroRpc\WalletRpc\Model\Destination;
 use Square\Pjson\Json;
 use Square\Pjson\JsonDataSerializable;
 

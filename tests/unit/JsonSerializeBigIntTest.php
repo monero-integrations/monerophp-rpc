@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\unit;
+namespace MoneroIntegrations\MoneroRpc\Tests\unit;
 
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\Model\Amount;
-use RefRing\MoneroRpcPhp\Tests\unit\JsonSerializeBigInt\Classes\ClassWithBigInt;
+use MoneroIntegrations\MoneroRpc\Model\Amount;
+use MoneroIntegrations\MoneroRpc\Tests\unit\JsonSerializeBigInt\Classes\ClassWithBigInt;
 
 class JsonSerializeBigIntTest extends TestCase
 {

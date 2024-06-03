@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Trait;
+namespace MoneroIntegrations\MoneroRpc\Trait;
 
-use RefRing\MoneroRpcPhp\Model\Amount;
-use RefRing\MoneroRpcPhp\Serialization\BigIntPropertyFinder;
+use MoneroIntegrations\MoneroRpc\Model\Amount;
+use MoneroIntegrations\MoneroRpc\Serialization\BigIntPropertyFinder;
 use Square\Pjson\JsonSerialize;
 
 /**

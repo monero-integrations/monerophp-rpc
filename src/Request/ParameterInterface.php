@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Request;
+namespace MoneroIntegrations\MoneroRpc\Request;
 
 interface ParameterInterface
 {

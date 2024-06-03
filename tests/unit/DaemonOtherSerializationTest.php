@@ -2,36 +2,36 @@
 
 declare(strict_types=1);
 
-namespace RefRing\MoneroRpcPhp\Tests\unit;
+namespace MoneroIntegrations\MoneroRpc\Tests\unit;
 
 use PHPUnit\Framework\TestCase;
-use RefRing\MoneroRpcPhp\DaemonOther\GetAltBlocksHashesRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\GetHeightRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\GetLimitRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\GetNetStatsRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\GetOutsRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\GetPeerListRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\GetTransactionPoolRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\GetTransactionPoolStatsRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\GetTransactionsRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\InPeersRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\IsKeyImageSpentRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\MiningStatusRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\Model\GetOutputsOut;
-use RefRing\MoneroRpcPhp\DaemonOther\OutPeersRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\PopBlocksRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\SaveBlockchainRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\SendRawTransactionRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\SetBootstrapDaemonRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\SetLimitRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\SetLogCategoriesRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\SetLogHashRateRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\SetLogLevelRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\StartMiningRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\StopDaemonRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\StopMiningRequest;
-use RefRing\MoneroRpcPhp\DaemonOther\UpdateRequest;
-use RefRing\MoneroRpcPhp\Enum\UpdateCommand;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetAltBlocksHashesRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetHeightRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetLimitRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetNetStatsRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetOutsRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetPeerListRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetTransactionPoolRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetTransactionPoolStatsRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\GetTransactionsRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\InPeersRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\IsKeyImageSpentRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\MiningStatusRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\Model\GetOutputsOut;
+use MoneroIntegrations\MoneroRpc\DaemonOther\OutPeersRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\PopBlocksRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SaveBlockchainRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SendRawTransactionRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetBootstrapDaemonRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetLimitRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetLogCategoriesRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetLogHashRateRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\SetLogLevelRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\StartMiningRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\StopDaemonRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\StopMiningRequest;
+use MoneroIntegrations\MoneroRpc\DaemonOther\UpdateRequest;
+use MoneroIntegrations\MoneroRpc\Enum\UpdateCommand;
 
 class DaemonOtherSerializationTest extends TestCase
 {
