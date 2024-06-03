@@ -1,0 +1,12 @@
+parameters:
+    level: 9
+    paths:
+        - src
+    ignoreErrors:
+        - '#^Method MoneroIntegrations\\MoneroRpc\\Serialization\\BigIntPropertyFinder\:\:findProperties\(\) should return array\{properties\: array\<string\>, listProperties\: array\<string\>\} but returns array\.$#'
+
+    checkGenericClassInNonGenericObjectType: false
+    reportUnmatchedIgnoredErrors: true
+
+includes:
+  - vendor/square/pjson/extension.neon

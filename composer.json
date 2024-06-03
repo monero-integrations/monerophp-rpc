@@ -1,0 +1,84 @@
+{
+    "name": "monero-integrations/monero-rpc",
+    "description": "Monero library for interacting with daemon rpc and wallet rpc APIs.",
+    "keywords": ["monero", "monero-wallet-rpc", "monero daemon","sdk", "api", "client"],
+    "homepage": "https://github.com/monero-integrations/monerophp-rpc",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Monero Integrations",
+            "email": "support@monerointegrations.com"
+        },
+        {
+            "name": "refring",
+            "email": "refring@proton.me"
+        }
+    ],
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    },
+    "require": {
+        "php": "^8.1.0",
+        "ext-json": "*",
+        "ext-bcmath": "*",
+        "php-http/discovery": "^1.19.0",
+        "psr/http-client": "^1.0.2",
+        "psr/http-client-implementation": "*",
+        "psr/http-factory-implementation": "*",
+        "psr/http-message": "^1.1.0|^2.0.0",
+        "psr/log": "^3.0",
+        "square/pjson": "^0.4.0"
+    },
+    "require-dev": {
+        "ext-sockets": "*",
+        "laravel/pint": "^1.10.3",
+        "monero-integrations/monerophp": "dev-master",
+        "nyholm/psr7": "^1.8",
+        "phpstan/phpstan": "^1.10.25",
+        "phpunit/phpunit": "^10.3.3",
+        "rector/rector": "^0.18.4",
+        "symfony/http-client": "^6.3"
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "HTTP client"
+    },
+    "autoload": {
+        "psr-4": {
+            "MoneroIntegrations\\MoneroRpc\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MoneroIntegrations\\MoneroRpc\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "lint": "pint --preset psr12 -v",
+        "refactor": "rector --debug",
+        "test:lint": "pint --preset psr12 --test -v",
+        "test:refactor": "rector --dry-run",
+        "test:phpstan": "phpstan analyse --ansi",
+        "test:unit": "phpunit --testsuite unit",
+        "test:integration": "phpunit --testsuite integration",
+        "test:coverage": "XDEBUG_MODE=coverage phpunit --coverage-text --coverage-clover tests/_reports/clover.xml --coverage-html tests/_reports/html",
+        "test": [
+            "@test:lint",
+            "@test:phpstan",
+            "@test:unit",
+            "@test:integration"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/monero-integrations/monerophp-rpc.git"
+        }
+    ]
+}
