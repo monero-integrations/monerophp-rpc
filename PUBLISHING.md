@@ -17,7 +17,7 @@ This document describes the process of publishing a new version of the package.
 		Where `<version>` is the new version number (e.g. `1.2.3`).
 4. Push the changes.
 	-	```bash
-		git push origin master --tags
+		git push origin main --tags
 		```
 
 A release will automatically be created.
